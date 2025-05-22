@@ -35,6 +35,23 @@ const advantagesCardsArray = [
 	}
 ]
 
+const authorsCardsArray = [
+	{
+		title: "Filipe Emerson",
+		subtitle: "Animador 2D e Artista ",
+		text: "Com mais de 10 anos de experiência no setor criativo, atuando em projetos de destaque para clientes como Gaules, Esporte Clube Bahia, Zombie Studios, e Cúpula Rec, entre outros.",
+		src: "filipe.jpg",
+		href: "https://www.instagram.com/filipe.emerson/"
+	},
+	{
+		title: "Gustavo Almeida",
+		subtitle: "Artista e Gestor de Marketing",
+		text: "Anos com experiência no mercado de games e publicidade. Atualmente atuando no setor de games, já contribuiu com empresas como Epopeia Games, Mito Games e TNT Sports Emma, Neon, Entre Outros",
+		src: "gustavo.png",
+		href: "https://www.instagram.com/gg2almeida/"
+	}
+]
+
 const HomePage = () => {
 	return (
 		<>
@@ -95,6 +112,35 @@ const HomePage = () => {
 
 					<section className="flex items-center justify-center">
 						<VideoSection />
+					</section>
+
+					<section className="space-y-3">
+						<h2 className="text-center text-[#8938C1] fonte-semibold text-5xl">Conheça os seus instrutores:</h2>
+
+						<ul className="flex justify-center gap-x-6">
+							{authorsCardsArray.map((card) => (
+								<li key={card.title} className="group w-[320px] h-[480px] relative rounded-lg overflow-hidden">
+									<Image
+										className="size-full object-cover transition-all duration-300 group-hover:scale-105"
+										width={900}
+										height={1280}
+										src={`/authors/${card.src}`}
+										alt={card.title}
+									/>
+
+									<div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+										<div className="text-white text-center">
+											<h3 className="text-2xl font-bold mb-2 relative overflow-hidden inline-block p-1">
+												<span className="relative z-10">{card.title}</span>
+												<div className="absolute inset-y-0 left-0 w-0 bg-purple-500 transition-all duration-1500 group-hover:w-full" />
+											</h3>
+											<p className="text-xl relative z-10 underline decoration-purple-500">{card.subtitle}</p>
+											<p className="text-sm relative z-10">{card.text}</p>
+										</div>
+									</div>
+								</li>
+							))}
+						</ul>
 					</section>
 				</div>
 			</div>
