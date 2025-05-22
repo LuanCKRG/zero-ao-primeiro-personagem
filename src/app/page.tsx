@@ -115,7 +115,9 @@ const HomePage = () => {
 								</CardHeader>
 
 								<CardAction className="w-full">
-									<Button className="w-full bg-[#8938C1] text-white hover:bg-[#8938C1]/80 hover:cursor-pointer h-11">Quero acesso Vitalício</Button>
+									<Button className="w-full bg-[#8938C1] text-white hover:bg-[#8938C1]/80 hover:cursor-pointer h-11" asChild>
+										<a href={LINK_HOTMART}>Quero acesso Vitalício</a>
+									</Button>
 								</CardAction>
 							</Card>
 						</div>
@@ -167,9 +169,9 @@ const HomePage = () => {
 					</section>
 
 					<section className="space-y-8">
-						<h2 className="text-2xl md:text-7xl text-center text-[#8938C1]">Cronograma</h2>
+						<h2 className="text-2xl md:text-5xl text-center text-[#8938C1]">Cronograma</h2>
 
-						<ul className="flex flex-col md:grid grid-cols-6 gap-x-10 gap-6">
+						<ul className="flex flex-col md:grid grid-cols-6 gap-x-10 gap-6 py-3">
 							{courseModulesCardsArray.map((courseModule, key) => (
 								<li
 									key={courseModule.id}
