@@ -39,6 +39,11 @@ const HomePage = () => {
 							</Card>
 						</div>
 					</section>
+
+					<p className="text-[#8938C1] text-center text-2xl">
+						Aprenda, passo a passo, a criar <span className="p-1 font-semibold bg-[#8938C1] text-white underline decoration-white">personagens marcantes</span>{" "}
+						e <span className="py-1 px-2 font-semibold bg-[#8938C1] text-white underline decoration-white">nada genéricos</span>.
+					</p>
 				</div>
 			</div>
 		</>
