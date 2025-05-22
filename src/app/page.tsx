@@ -3,8 +3,36 @@ import { ArrowRightIcon } from "lucide-react"
 
 import { Vortex } from "@/components/vortex"
 import { LINK_HOTMART } from "@/constants/links"
-import { Card, CardHeader, CardAction } from "@/components/ui/card"
+import { Card, CardHeader, CardAction, CardTitle, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+
+const advantagesCardsArray = [
+	{
+		title: "Organização do Projeto",
+		text: "Manter o fluxo do projeto é mais importante do que você imagina. Vamos ensinar todos os passos necessários para criar personagens e mostrar como respeitar o planejamento pode tornar seus projetos muito mais eficientes e profissionais.",
+		src: "note"
+	},
+	{
+		title: "Programas para Auxiliar",
+		text: "Nem só de Photoshop vive o artista! Vamos explorar técnicas e recursos de outros programas e ferramentas que podem facilitar o seu processo criativo.",
+		src: "settings"
+	},
+	{
+		title: "Como Fugir do Genérico",
+		text: "Você vai aprender as ferramentas necessárias para criar personagens que se destacam, com personalidades únicas e marcantes.",
+		src: "face"
+	},
+	{
+		title: "Fundamentos de Desenho",
+		text: "Antes de criar personagens, é essencial revisar os conceitos básicos que auxiliam no desenvolvimento de qualquer tipo de arte visual. Esses famosos fundamentos serão abordados em nosso conteúdo.",
+		src: "pencil"
+	},
+	{
+		title: "Personagens",
+		text: "Manter o fluxo do projeto é mais importante do que você imagina. Vamos ensinar todos os passos necessários para criar personagens e mostrar como seguir o planejamento pode elevar a qualidade dos seus projetos.",
+		src: "light"
+	}
+]
 
 const HomePage = () => {
 	return (
@@ -44,6 +72,25 @@ const HomePage = () => {
 						Aprenda, passo a passo, a criar <span className="p-1 font-semibold bg-[#8938C1] text-white underline decoration-white">personagens marcantes</span>{" "}
 						e <span className="py-1 px-2 font-semibold bg-[#8938C1] text-white underline decoration-white">nada genéricos</span>.
 					</p>
+
+					<section className="relative">
+						<Image src={"/backgrounds/advantages.png"} alt="" className="w-full absolute -z-10" width={1200} height={600} />
+
+						<div className="grid grid-cols-6 gap-10">
+							{advantagesCardsArray.map((card) => (
+								<Card key={card.src} className="col-span-2 nth-4:translate-x-1/2 nth-5:translate-x-1/2 bg-purple-400/0 backdrop-blur-xs isolate shadow-lg">
+									<CardHeader>
+										<Image className="size-16 mx-auto" src={`/icons/${card.src}-icon.svg`} alt="" width={100} height={100} />
+										<CardTitle className="text-center uppercase">{card.title}</CardTitle>
+									</CardHeader>
+
+									<CardContent>
+										<p className="text-sm text-muted-foreground">{card.text}</p>
+									</CardContent>
+								</Card>
+							))}
+						</div>
+					</section>
 				</div>
 			</div>
 		</>
