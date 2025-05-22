@@ -1,11 +1,12 @@
 import Image from "next/image"
-import { ArrowRightIcon } from "lucide-react"
+import { ArrowRightIcon, Circle } from "lucide-react"
 
 import { Vortex } from "@/components/vortex"
 import { LINK_HOTMART } from "@/constants/links"
 import { Card, CardHeader, CardAction, CardTitle, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { VideoSection } from "@/components/video-section"
+import { AuthorCard } from "@/components/author-card"
 
 const advantagesCardsArray = [
 	{
@@ -52,30 +53,64 @@ const authorsCardsArray = [
 	}
 ]
 
+const courseModulesCardsArray = [
+	{
+		id: 1,
+		isNumericList: false,
+		title: "Antes de Desenhar, o que você precisa fazer?",
+		steps: ["Como usar referências nos seus personagens", "A linguagem dos shapes", "O que é uma boa silhueta?"]
+	},
+
+	{
+		id: 2,
+		isNumericList: true,
+		title: "Vamos ao básico (fundamentos)",
+		steps: ["Proporção", "Gestual para personagens", "Perspectiva", "Manual completo sobre mão e pé", "Aplicando feedbacks em artes antigas"]
+	},
+
+	{ id: 3, isNumericList: true, title: "Criação de Personagem", steps: ["Criação de personagem do início ao fim", "Criação de personagem – parte 2"] },
+
+	{ id: 4, isNumericList: false, title: "Personagem para Animação", steps: ["O que um personagem precisa para funcionar na animação + turnaround"] },
+
+	{
+		id: 5,
+		isNumericList: false,
+		title: "Personagem para Games",
+		steps: ["Como pensar personagens para o mercado de games com Filpe Anslemé (Mad Boogie Creations)"]
+	},
+
+	{ id: 6, isNumericList: false, title: "Vamos Produzir", steps: ["Mão na massa: vamos criar personagens"] },
+
+	{ id: 7, isNumericList: true, title: "Redes Sociais para Artistas", steps: ["Como postar, viralizar e vender", "Qual a melhor rede social para você ?"] }
+]
+
 const HomePage = () => {
 	return (
 		<>
-			<div className="relative overflow-hidden px-16">
+			<div className="relative overflow-hidden px-2 md:px-8 lg:px-16">
 				<div className="fixed left-0 -top-40 size-full -z-20 overflow-hidden">
 					<Vortex backgroundColor="transparent" className="flex size-full" rangeY={300} baseRadius={2} particleCount={50} rangeSpeed={1.5} baseHue={200} />
 				</div>
 
-				<div className="space-y-20">
-					<section className="grid grid-cols-6 md:gap-10">
-						<div className="col-span-3">
+				<div className="space-y-8 xl:space-y-20">
+					<section id="curso" className="flex flex-col items-center md:grid md:grid-cols-6 md:gap-10">
+						<div className="col-span-3 order-1 md:order-0">
 							<Image alt="" src="/hero-image.jpeg" width={800} height={400} />
 						</div>
 
-						<div className="col-span-3 flex flex-col gap-y-6 justify-center items-center">
-							<a href={LINK_HOTMART} className="border bg-card border-input group inline-flex items-center rounded-lg px-3 py-1 text-sm font-medium">
+						<div className="col-span-3 contents md:flex flex-col gap-y-6 justify-center items-center">
+							<a
+								href={LINK_HOTMART}
+								className="order-0 md:order-1 border bg-card border-input group inline-flex items-center rounded-lg px-3 py-1 text-sm font-medium w-fit"
+							>
 								<span className="sm:hidden transition group-hover:scale-110 group-hover:text-[#8938C1]">Quero aprender</span>
 								<span className="hidden sm:inline transition group-hover:scale-110 group-hover:text-[#8938C1]">Quero aprender</span>
 								<ArrowRightIcon className="ml-1 size-4 group-hover:scale-110 transition group-hover:translate-x-1 group-hover:text-[#8938C1]" />
 							</a>
 
-							<Card className="flex justify-between p-16 w-full bg-purple-400/0 backdrop-blur-xs isolate aspect-video shadow-lg ring-1 ring-black/5">
-								<CardHeader className="flex flex-col items-start w-full gap-y-4 px-0">
-									<p className="text-5xl leading-none font-bold">R$ 120,00</p>
+							<Card className="order-2 flex justify-between p-4 lg:p-16 w-full bg-purple-400/0 backdrop-blur-xs isolate max-md:gap-y-10 md:aspect-video shadow-lg ring-1 ring-black/5 mx-6 md:mx-0">
+								<CardHeader className="flex flex-col items-center md:items-start w-full xs:gap-y-4 px-0">
+									<p className="text-4xl lg:text-5xl leading-none font-bold">R$ 120,00</p>
 									<p className="text-3xl leading-none font-bold">Preço único</p>
 								</CardHeader>
 
@@ -86,23 +121,27 @@ const HomePage = () => {
 						</div>
 					</section>
 
-					<p className="text-[#8938C1] text-center text-2xl">
-						Aprenda, passo a passo, a criar <span className="p-1 font-semibold bg-[#8938C1] text-white underline decoration-white">personagens marcantes</span>{" "}
-						e <span className="py-1 px-2 font-semibold bg-[#8938C1] text-white underline decoration-white">nada genéricos</span>.
+					<p className="text-[#8938C1] text-center text-sm xl:text-2xl">
+						Aprenda, passo a passo, a criar{" "}
+						<span className="sm:py-1 sm:px-2 font-semibold bg-[#8938C1] text-white underline decoration-white">personagens marcantes</span> e{" "}
+						<span className="sm:py-1 sm:px-2 font-semibold bg-[#8938C1] text-white underline decoration-white">nada genéricos</span>.
 					</p>
 
-					<section className="relative">
-						<Image src={"/backgrounds/advantages.png"} alt="" className="w-full absolute -z-10" width={1200} height={600} />
+					<section id="o-que-voce-vai-aprender" className="relative flex items-center">
+						<Image src={"/backgrounds/advantages.png"} alt="" className="w-full absolute -z-10 my-auto" width={1200} height={600} />
 
-						<div className="grid grid-cols-6 gap-10">
+						<div className="flex flex-col gap-6 md:grid grid-cols-6 lg:gap-10 mx-4 md:mx-0">
 							{advantagesCardsArray.map((card) => (
-								<Card key={card.src} className="col-span-2 nth-4:translate-x-1/2 nth-5:translate-x-1/2 bg-purple-400/0 backdrop-blur-xs isolate shadow-lg">
+								<Card
+									key={card.src}
+									className="col-span-2 md:nth-4:translate-x-1/2 md:nth-5:translate-x-1/2 bg-purple-400/0 backdrop-blur-xs isolate shadow-lg"
+								>
 									<CardHeader>
 										<Image className="size-16 mx-auto" src={`/icons/${card.src}-icon.svg`} alt="" width={100} height={100} />
 										<CardTitle className="text-center uppercase">{card.title}</CardTitle>
 									</CardHeader>
 
-									<CardContent>
+									<CardContent className="md:max-lg:px-2">
 										<p className="text-sm text-muted-foreground">{card.text}</p>
 									</CardContent>
 								</Card>
@@ -110,34 +149,45 @@ const HomePage = () => {
 						</div>
 					</section>
 
-					<section className="flex items-center justify-center">
+					<section
+						id="trailer"
+						className="flex items-center justify-center p-4 sm:p-8 lg:p-20 rounded-lg bg-purple-400/5 backdrop-blur-xs isolate shadow-lg shadow-purple-500"
+					>
 						<VideoSection />
 					</section>
 
-					<section className="space-y-3">
-						<h2 className="text-center text-[#8938C1] fonte-semibold text-5xl">Conheça os seus instrutores:</h2>
+					<section id="quem-somos" className="space-y-4 md:space-y-8">
+						<h2 className="text-center text-[#8938C1] fonte-semibold text-2xl xs:text-3xl md:text-5xl">Conheça os seus instrutores:</h2>
 
-						<ul className="flex justify-center gap-x-6">
+						<ul className="flex flex-col md:flex-row justify-center items-center gap-6">
 							{authorsCardsArray.map((card) => (
-								<li key={card.title} className="group w-[320px] h-[480px] relative rounded-lg overflow-hidden">
-									<Image
-										className="size-full object-cover transition-all duration-300 group-hover:scale-105"
-										width={900}
-										height={1280}
-										src={`/authors/${card.src}`}
-										alt={card.title}
-									/>
+								<AuthorCard key={card.title} {...card} />
+							))}
+						</ul>
+					</section>
 
-									<div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
-										<div className="text-white text-center">
-											<h3 className="text-2xl font-bold mb-2 relative overflow-hidden inline-block p-1">
-												<span className="relative z-10">{card.title}</span>
-												<div className="absolute inset-y-0 left-0 w-0 bg-purple-500 transition-all duration-1500 group-hover:w-full" />
-											</h3>
-											<p className="text-xl relative z-10 underline decoration-purple-500">{card.subtitle}</p>
-											<p className="text-sm relative z-10">{card.text}</p>
-										</div>
-									</div>
+					<section className="space-y-8">
+						<h2 className="text-2xl md:text-7xl text-center text-[#8938C1]">Cronograma</h2>
+
+						<ul className="flex flex-col md:grid grid-cols-6 gap-x-10 gap-6">
+							{courseModulesCardsArray.map((courseModule, key) => (
+								<li
+									key={courseModule.id}
+									className="col-span-2 nth-1:col-span-3 nth-2:col-span-3 md:nth-6:translate-x-1/2 md:nth-7:translate-x-1/2 bg-purple-400/0 backdrop-blur-xs isolate shadow-xl p-6 rounded-xl transition-all duration-300 hover:shadow-xl hover:shadow-purple-300 hover:scale-105"
+								>
+									<h3 className="text-center font-medium uppercase text-sm xs:text-base">Módulo {key + 1}</h3>
+
+									<p className="text-center font-semibold mb-3 text-sm xs:text-base">{courseModule.title}</p>
+
+									{courseModule.steps.map((step, index) => (
+										<p key={step} className="text-xs xs:text-base">
+											<span className="inline-flex items-center">
+												{courseModule.isNumericList ? `${index + 1} -` : <Circle className="fill-black inline size-2 mr-1" />}
+											</span>
+
+											<span> {step}</span>
+										</p>
+									))}
 								</li>
 							))}
 						</ul>
