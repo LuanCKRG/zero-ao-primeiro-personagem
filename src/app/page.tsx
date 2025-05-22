@@ -5,6 +5,7 @@ import { Vortex } from "@/components/vortex"
 import { LINK_HOTMART } from "@/constants/links"
 import { Card, CardHeader, CardAction, CardTitle, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { VideoSection } from "@/components/video-section"
 
 const advantagesCardsArray = [
 	{
@@ -90,6 +91,10 @@ const HomePage = () => {
 								</Card>
 							))}
 						</div>
+					</section>
+
+					<section className="flex items-center justify-center">
+						<VideoSection />
 					</section>
 				</div>
 			</div>
