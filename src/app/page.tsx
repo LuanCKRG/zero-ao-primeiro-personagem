@@ -99,15 +99,6 @@ const HomePage = () => {
 						</div>
 
 						<div className="col-span-3 contents md:flex flex-col gap-y-6 justify-center items-center">
-							<a
-								href={LINK_HOTMART}
-								className="order-0 md:order-1 border bg-card border-input group inline-flex items-center rounded-lg px-3 py-1 text-sm font-medium w-fit"
-							>
-								<span className="sm:hidden transition group-hover:scale-110 group-hover:text-[#8938C1]">Quero aprender</span>
-								<span className="hidden sm:inline transition group-hover:scale-110 group-hover:text-[#8938C1]">Quero aprender</span>
-								<ArrowRightIcon className="ml-1 size-4 group-hover:scale-110 transition group-hover:translate-x-1 group-hover:text-[#8938C1]" />
-							</a>
-
 							<Card className="order-2 flex justify-between p-4 lg:p-16 w-full bg-purple-400/0 backdrop-blur-xs isolate max-md:gap-y-10 md:aspect-video shadow-lg ring-1 ring-black/5 mx-6 md:mx-0">
 								<CardHeader className="flex flex-col items-center md:items-start w-full xs:gap-y-4 px-0">
 									<p className="text-4xl lg:text-5xl leading-none font-bold">R$ 120,00</p>
