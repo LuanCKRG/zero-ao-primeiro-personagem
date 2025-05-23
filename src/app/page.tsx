@@ -93,7 +93,7 @@ const HomePage = () => {
 				</div>
 
 				<div className="space-y-8 xl:space-y-20">
-					<section id="curso" className="flex flex-col items-center md:grid md:grid-cols-6 md:gap-10">
+					<section id="curso" className="flex flex-col items-center">
 						<div className="col-span-3 order-1 md:order-0">
 							<Image alt="" src="/hero-image.jpeg" width={800} height={400} />
 						</div>
