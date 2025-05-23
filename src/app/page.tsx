@@ -98,21 +98,19 @@ const HomePage = () => {
 							<Image alt="" src="/hero-image.jpeg" width={800} height={400} />
 						</div>
 
-						<div className="col-span-3 contents md:flex flex-col gap-y-6 justify-center items-center">
-							<Card className="flex flex-col lg:grid grid-cols-8 lg:justify-between p-4 lg:p-8 w-full mx-6 md:mx-0 gap-x-10 bg-purple-400/0 backdrop-blur-xs isolate shadow-lg ring-1 ring-black/5">
-								<CardHeader className="flex flex-col items-center w-full xs:gap-y-4 px-0">
-									<p className="text-6xl leading-none font-bold flex">
-										<span className="text-3xl self-end">R$</span> 120 <span className="text-3xl self-start">,00</span>
-									</p>
-								</CardHeader>
+						<Card className="flex flex-col lg:grid grid-cols-8 lg:justify-between p-4 lg:p-8 w-full mx-6 md:mx-0 gap-x-10 bg-purple-400/0 backdrop-blur-xs isolate shadow-lg ring-1 ring-black/5">
+							<CardHeader className="flex flex-col items-center w-full xs:gap-y-4 px-0">
+								<p className="text-6xl leading-none font-bold flex">
+									<span className="text-3xl self-end">R$</span> 120 <span className="text-3xl self-start">,00</span>
+								</p>
+							</CardHeader>
 
-								<CardAction className="w-full">
-									<Button className="w-full bg-[#6A3E91] hover:bg-[#6A3E91]/80 text-white hover:text-neutral-100 hover:cursor-pointer h-11" asChild>
-										<a href={LINK_HOTMART}>Quero acesso Vitalício</a>
-									</Button>
-								</CardAction>
-							</Card>
-						</div>
+							<CardAction className="w-full">
+								<Button className="w-full bg-[#6A3E91] hover:bg-[#6A3E91]/80 text-white hover:text-neutral-100 hover:cursor-pointer h-11" asChild>
+									<a href={LINK_HOTMART}>Quero acesso Vitalício</a>
+								</Button>
+							</CardAction>
+						</Card>
 					</section>
 
 					<p className="text-[#8938C1] text-center text-sm xl:text-2xl">
