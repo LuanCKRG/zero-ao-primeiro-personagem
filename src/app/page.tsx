@@ -132,7 +132,7 @@ const HomePage = () => {
 									key={card.src}
 									className="col-span-2 md:nth-4:translate-x-1/2 md:nth-5:translate-x-1/2 bg-purple-400/0 backdrop-blur-xs isolate shadow-lg"
 								>
-									<CardHeader>
+									<CardHeader className="gap-3">
 										<div className="w-fit flex items-center justify-center bg-[#6A3E91] rounded-full p-4 mx-auto">
 											<Image
 												className="size-16 filter invert brightness-500 contrast-100 saturate-0 mix-blend-lighten"
