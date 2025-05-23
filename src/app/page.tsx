@@ -106,17 +106,20 @@ const HomePage = () => {
 							<p className="text-lg sm:text-2xl col-span-4">
 								Aprenda, passo a passo, a criar <span className="font-semibold underline">personagens marcantes e nada genéricos.</span>
 							</p>
-							<CardHeader className="flex flex-col items-center w-full xs:gap-y-4 px-0">
-								<p className="text-6xl leading-none font-bold flex">
-									<span className="text-3xl self-end">R$</span> 120 <span className="text-3xl self-start">,00</span>
-								</p>
-							</CardHeader>
 
-							<CardAction className="w-full">
-								<Button className="w-full bg-[#6A3E91] hover:bg-[#6A3E91]/80 text-white hover:text-neutral-100 hover:cursor-pointer h-11" asChild>
-									<a href={LINK_HOTMART}>Quero acesso Vitalício</a>
-								</Button>
-							</CardAction>
+							<div className="col-span-3 col-start-6 flex flex-col justify-between gap-y-3">
+								<CardHeader className="flex flex-col items-center w-full xs:gap-y-4 px-0">
+									<p className="text-6xl leading-none font-bold flex">
+										<span className="text-3xl self-end">R$</span> 120 <span className="text-3xl self-start">,00</span>
+									</p>
+								</CardHeader>
+
+								<CardAction className="w-full">
+									<Button className="w-full bg-[#6A3E91] hover:bg-[#6A3E91]/80 text-white hover:text-neutral-100 hover:cursor-pointer h-11" asChild>
+										<a href={LINK_HOTMART}>Quero acesso Vitalício</a>
+									</Button>
+								</CardAction>
+							</div>
 						</Card>
 					</section>
 
