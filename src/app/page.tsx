@@ -103,6 +103,9 @@ const HomePage = () => {
 						</div>
 
 						<Card className="flex flex-col lg:grid grid-cols-8 lg:justify-between p-4 lg:p-8 w-full mx-6 md:mx-0 gap-x-10 bg-purple-400/0 backdrop-blur-xs isolate shadow-lg ring-1 ring-black/5">
+							<p className="text-lg sm:text-2xl col-span-4">
+								Aprenda, passo a passo, a criar <span className="font-semibold underline">personagens marcantes e nada genéricos.</span>
+							</p>
 							<CardHeader className="flex flex-col items-center w-full xs:gap-y-4 px-0">
 								<p className="text-6xl leading-none font-bold flex">
 									<span className="text-3xl self-end">R$</span> 120 <span className="text-3xl self-start">,00</span>
