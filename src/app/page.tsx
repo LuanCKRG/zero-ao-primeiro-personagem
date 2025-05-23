@@ -107,7 +107,7 @@ const HomePage = () => {
 								</CardHeader>
 
 								<CardAction className="w-full">
-									<Button className="w-full bg-[#8938C1] text-white hover:bg-[#8938C1]/80 hover:cursor-pointer h-11" asChild>
+									<Button className="w-full bg-[#6A3E91] hover:bg-[#6A3E91]/80 text-white hover:text-neutral-100 hover:cursor-pointer h-11" asChild>
 										<a href={LINK_HOTMART}>Quero acesso Vitalício</a>
 									</Button>
 								</CardAction>
