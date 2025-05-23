@@ -100,9 +100,10 @@ const HomePage = () => {
 
 						<div className="col-span-3 contents md:flex flex-col gap-y-6 justify-center items-center">
 							<Card className="order-2 flex justify-between p-4 lg:p-16 w-full bg-purple-400/0 backdrop-blur-xs isolate max-md:gap-y-10 md:aspect-video shadow-lg ring-1 ring-black/5 mx-6 md:mx-0">
-								<CardHeader className="flex flex-col items-center md:items-start w-full xs:gap-y-4 px-0">
-									<p className="text-4xl lg:text-5xl leading-none font-bold">R$ 120,00</p>
-									<p className="text-3xl leading-none font-bold">Preço único</p>
+								<CardHeader className="flex flex-col items-center w-full xs:gap-y-4 px-0">
+									<p className="text-6xl leading-none font-bold flex">
+										<span className="text-3xl self-end">R$</span> 120 <span className="text-3xl self-start">,00</span>
+									</p>
 								</CardHeader>
 
 								<CardAction className="w-full">
