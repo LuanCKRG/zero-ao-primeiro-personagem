@@ -123,12 +123,6 @@ const HomePage = () => {
 						</Card>
 					</section>
 
-					<p className="text-[#8938C1] text-center text-sm xl:text-2xl">
-						Aprenda, passo a passo, a criar{" "}
-						<span className="sm:py-1 sm:px-2 font-semibold bg-[#8938C1] text-white underline decoration-white">personagens marcantes</span> e{" "}
-						<span className="sm:py-1 sm:px-2 font-semibold bg-[#8938C1] text-white underline decoration-white">nada genéricos</span>.
-					</p>
-
 					<section id="o-que-voce-vai-aprender" className="relative flex items-center">
 						<Image src={"/backgrounds/advantages.png"} alt="" className="w-full absolute -z-10 my-auto" width={1200} height={600} />
 
