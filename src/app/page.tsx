@@ -94,8 +94,12 @@ const HomePage = () => {
 
 				<div className="space-y-8 xl:space-y-20">
 					<section id="curso" className="flex flex-col items-center">
-						<div className="col-span-3 order-1 md:order-0">
-							<Image alt="" src="/hero-image.jpeg" width={800} height={400} />
+						<div className="max-w-[705px] flex flex-col items-center">
+							<Image className="w-full" alt="" src="/hero-image.jpeg" width={800} height={400} />
+
+							<p className="w-full text-lg sm:text-2xl md:text-3xl text-start text-[#6A3E91] uppercase font-bold -translate-y-3 xs:-translate-y-8 ">
+								Do zero ao primeiro <br /> personagem
+							</p>
 						</div>
 
 						<Card className="flex flex-col lg:grid grid-cols-8 lg:justify-between p-4 lg:p-8 w-full mx-6 md:mx-0 gap-x-10 bg-purple-400/0 backdrop-blur-xs isolate shadow-lg ring-1 ring-black/5">
