@@ -163,7 +163,7 @@ const CarouselPrevious = ({ className, variant = "outline", size = "icon", ...pr
 			onClick={scrollPrev}
 			{...props}
 		>
-			<ArrowLeft />
+			<ArrowLeft className="size-8" />
 			<span className="sr-only">Previous slide</span>
 		</Button>
 	)
@@ -186,7 +186,7 @@ const CarouselNext = ({ className, variant = "outline", size = "icon", ...props 
 			onClick={scrollNext}
 			{...props}
 		>
-			<ArrowRight />
+			<ArrowRight className="size-8" />
 			<span className="sr-only">Next slide</span>
 		</Button>
 	)
