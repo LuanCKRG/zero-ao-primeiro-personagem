@@ -152,8 +152,14 @@ const HomePage = () => {
 						<VideoSection />
 					</section>
 
-					<section id="quem-somos" className="space-y-4 md:space-y-8">
-						<h2 className="text-center text-[#8938C1] fonte-semibold text-2xl xs:text-3xl md:text-5xl">Conheça os seus instrutores:</h2>
+					<section id="quem-somos" className="space-y-4 md:space-y-8 relative">
+						<Image
+							src="/backgrounds/bg-image.png"
+							alt=""
+							className="absolute -z-30 rotate-180 inset-x-0 top-0 w-full translate-y-1/8 max-h-[904px]"
+							width={800}
+							height={800}
+						/>
 
 						<ul className="flex flex-col md:flex-row justify-center items-center gap-6">
 							{authorsCardsArray.map((card) => (
@@ -162,7 +168,7 @@ const HomePage = () => {
 						</ul>
 					</section>
 
-					<section className="space-y-8">
+					<section className="space-y-8 lg:mt-46">
 						<h2 className="text-2xl md:text-5xl text-center text-[#8938C1]">Cronograma</h2>
 
 						<ul className="flex flex-col md:grid grid-cols-6 gap-x-10 gap-6 py-3">
