@@ -93,6 +93,7 @@ const HomePage = () => {
 							</p>
 						</div>
 
+						<div className="lg:px-4">
 						<Card className="flex flex-col lg:grid grid-cols-8 lg:justify-between p-4 lg:p-8 w-full mx-6 md:mx-0 gap-x-10 bg-purple-400/0 backdrop-blur-xs isolate shadow-lg ring-1 ring-black/5">
 							<p className="text-lg sm:text-2xl col-span-4">
 								Aprenda, passo a passo, a criar <span className="font-semibold underline">personagens marcantes e nada genéricos.</span>
@@ -112,6 +113,7 @@ const HomePage = () => {
 								</CardAction>
 							</div>
 						</Card>
+						</div>
 					</section>
 
 					<section id="o-que-voce-vai-aprender" className="relative flex items-center">
