@@ -56,32 +56,23 @@ const authorsCardsArray = [
 const courseModulesCardsArray = [
 	{
 		id: 1,
-		isNumericList: false,
 		title: "Antes de Desenhar, o que você precisa fazer?",
 		steps: ["Como usar referências nos seus personagens", "A linguagem dos shapes", "O que é uma boa silhueta?"]
 	},
-
 	{
 		id: 2,
-		isNumericList: true,
 		title: "Vamos ao básico (fundamentos)",
 		steps: ["Proporção", "Gestual para personagens", "Perspectiva", "Manual completo sobre mão e pé", "Aplicando feedbacks em artes antigas"]
 	},
-
-	{ id: 3, isNumericList: true, title: "Criação de Personagem", steps: ["Criação de personagem do início ao fim", "Criação de personagem – parte 2"] },
-
-	{ id: 4, isNumericList: false, title: "Personagem para Animação", steps: ["O que um personagem precisa para funcionar na animação + turnaround"] },
-
+	{ id: 3, title: "Criação de Personagem", steps: ["Criação de personagem do início ao fim", "Criação de personagem – parte 2"] },
+	{ id: 4, title: "Personagem para Animação", steps: ["O que um personagem precisa para funcionar na animação + turnaround"] },
 	{
 		id: 5,
-		isNumericList: false,
 		title: "Personagem para Games",
 		steps: ["Como pensar personagens para o mercado de games com Filpe Anslemé (Mad Boogie Creations)"]
 	},
-
-	{ id: 6, isNumericList: false, title: "Vamos Produzir", steps: ["Mão na massa: vamos criar personagens"] },
-
-	{ id: 7, isNumericList: true, title: "Redes Sociais para Artistas", steps: ["Como postar, viralizar e vender", "Qual a melhor rede social para você ?"] }
+	{ id: 6, title: "Vamos Produzir", steps: ["Mão na massa: vamos criar personagens"] },
+	{ id: 7, title: "Redes Sociais para Artistas", steps: ["Como postar, viralizar e vender", "Qual a melhor rede social para você ?"] }
 ]
 
 const HomePage = () => {
@@ -187,7 +178,7 @@ const HomePage = () => {
 									{courseModule.steps.map((step, index) => (
 										<p key={step} className="text-xs xs:text-base">
 											<span className="inline-flex items-center">
-												{courseModule.isNumericList ? `${index + 1} -` : <Circle className="fill-black inline size-2 mr-1" />}
+												<Circle className="fill-black inline size-2 mr-1" />
 											</span>
 
 											<span> {step}</span>
