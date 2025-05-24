@@ -161,6 +161,8 @@ const HomePage = () => {
 							height={800}
 						/>
 
+						<h2 className="text-center text-[#8938C1] fonte-semibold text-2xl xs:text-3xl md:text-5xl font-semibold uppercase">Conheça os seus instrutores:</h2>
+
 						<ul className="flex flex-col md:flex-row justify-center items-center gap-6">
 							{authorsCardsArray.map((card) => (
 								<AuthorCard key={card.title} {...card} />
@@ -169,7 +171,7 @@ const HomePage = () => {
 					</section>
 
 					<section className="space-y-8 lg:mt-46">
-						<h2 className="text-2xl md:text-5xl text-center text-[#8938C1]">Cronograma</h2>
+						<h2 className="text-2xl md:text-5xl text-center text-[#8938C1] font-semibold uppercase">Cronograma</h2>
 
 						<ul className="flex flex-col md:grid grid-cols-6 gap-x-10 gap-6 py-3">
 							{courseModulesCardsArray.map((courseModule, key) => (
