@@ -113,6 +113,7 @@ const Carousel = ({ orientation = "horizontal", opts, setApi, plugins, className
       <div
         onKeyDownCapture={handleKeyDown}
         className={cn("relative", className)}
+				// biome-ignore lint/a11y/useSemanticElements: <we don't know how it works yet>
         role="region"
         aria-roledescription="carousel"
         data-slot="carousel"
