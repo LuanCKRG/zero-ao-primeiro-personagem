@@ -1,5 +1,4 @@
 import Image from "next/image"
-import { ArrowRightIcon, Circle } from "lucide-react"
 
 import { Vortex } from "@/components/vortex"
 import { LINK_HOTMART } from "@/constants/links"
@@ -7,6 +6,7 @@ import { Card, CardHeader, CardAction, CardTitle, CardContent } from "@/componen
 import { Button } from "@/components/ui/button"
 import { VideoSection } from "@/components/video-section"
 import { AuthorCard } from "@/components/author-card"
+import { CourseModulesSection } from "@/components/course-modules-section"
 
 const advantagesCardsArray = [
 	{
@@ -53,28 +53,6 @@ const authorsCardsArray = [
 	}
 ]
 
-const courseModulesCardsArray = [
-	{
-		id: 1,
-		title: "Antes de Desenhar, o que você precisa fazer?",
-		steps: ["Como usar referências nos seus personagens", "A linguagem dos shapes", "O que é uma boa silhueta?"]
-	},
-	{
-		id: 2,
-		title: "Vamos ao básico (fundamentos)",
-		steps: ["Proporção", "Gestual para personagens", "Perspectiva", "Manual completo sobre mão e pé", "Aplicando feedbacks em artes antigas"]
-	},
-	{ id: 3, title: "Criação de Personagem", steps: ["Criação de personagem do início ao fim", "Criação de personagem – parte 2"] },
-	{ id: 4, title: "Personagem para Animação", steps: ["O que um personagem precisa para funcionar na animação + turnaround"] },
-	{
-		id: 5,
-		title: "Personagem para Games",
-		steps: ["Como pensar personagens para o mercado de games com Filpe Anslemé (Mad Boogie Creations)"]
-	},
-	{ id: 6, title: "Vamos Produzir", steps: ["Mão na massa: vamos criar personagens"] },
-	{ id: 7, title: "Redes Sociais para Artistas", steps: ["Como postar, viralizar e vender", "Qual a melhor rede social para você ?"] }
-]
-
 const HomePage = () => {
 	return (
 		<>
@@ -93,8 +71,8 @@ const HomePage = () => {
 							</p>
 						</div>
 
-						<div className="lg:px-4">
-							<Card className="flex flex-col lg:grid grid-cols-8 lg:justify-between p-4 lg:p-8 w-full mx-6 md:mx-0 gap-x-10 bg-purple-400/0 backdrop-blur-xs isolate shadow-lg ring-1 ring-black/5">
+						<div className="px-6 lg:px-4">
+							<Card className="flex flex-col lg:grid grid-cols-8 lg:justify-between p-4 lg:p-8 w-full gap-x-10 bg-purple-400/0 backdrop-blur-xs isolate shadow-lg ring-1 ring-black/5">
 								<p className="text-lg sm:text-2xl col-span-4">
 									Aprenda, passo a passo, a criar <span className="font-semibold underline">personagens marcantes e nada genéricos.</span>
 								</p>
@@ -172,8 +150,8 @@ const HomePage = () => {
 
 					<section className="space-y-8 lg:mt-46">
 						<h2 className="text-2xl md:text-5xl text-center text-[#8938C1] font-semibold uppercase">Cronograma</h2>
-
-						<ul className="flex flex-col md:grid grid-cols-6 gap-x-10 gap-6 py-3">
+						<CourseModulesSection />
+						{/* <ul className="flex flex-col md:grid grid-cols-6 gap-x-10 gap-6 py-3">
 							{courseModulesCardsArray.map((courseModule, key) => (
 								<li
 									key={courseModule.id}
@@ -194,7 +172,29 @@ const HomePage = () => {
 									))}
 								</li>
 							))}
-						</ul>
+						</ul> */}
+					</section>
+
+					<section className="px-6 md:px-0">
+						<Card className="flex flex-col lg:grid grid-cols-8 lg:justify-between p-4 lg:p-8 w-full gap-x-10 bg-purple-400/0 backdrop-blur-xs isolate shadow-lg ring-1 ring-black/5">
+							<p className="text-lg sm:text-2xl col-span-4 text-center lg:text-start text-[#6A3E91] uppercase font-bold">
+								Do zero ao primeiro <br className="hidden lg:block" /> personagem
+							</p>
+
+							<div className="col-span-3 col-start-6 flex flex-col justify-between gap-y-3">
+								<CardHeader className="flex flex-col items-center w-full xs:gap-y-4 px-0">
+									<p className="text-6xl leading-none font-bold flex">
+										<span className="text-3xl self-end">R$</span> 120 <span className="text-3xl self-start">,00</span>
+									</p>
+								</CardHeader>
+
+								<CardAction className="w-full">
+									<Button className="w-full bg-[#6A3E91] hover:bg-[#6A3E91]/80 text-white hover:text-neutral-100 hover:cursor-pointer h-11" asChild>
+										<a href={LINK_HOTMART}>Quero acesso Vitalício</a>
+									</Button>
+								</CardAction>
+							</div>
+						</Card>
 					</section>
 				</div>
 			</div>
