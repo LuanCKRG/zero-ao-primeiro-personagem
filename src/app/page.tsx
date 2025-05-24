@@ -94,25 +94,25 @@ const HomePage = () => {
 						</div>
 
 						<div className="lg:px-4">
-						<Card className="flex flex-col lg:grid grid-cols-8 lg:justify-between p-4 lg:p-8 w-full mx-6 md:mx-0 gap-x-10 bg-purple-400/0 backdrop-blur-xs isolate shadow-lg ring-1 ring-black/5">
-							<p className="text-lg sm:text-2xl col-span-4">
-								Aprenda, passo a passo, a criar <span className="font-semibold underline">personagens marcantes e nada genéricos.</span>
-							</p>
+							<Card className="flex flex-col lg:grid grid-cols-8 lg:justify-between p-4 lg:p-8 w-full mx-6 md:mx-0 gap-x-10 bg-purple-400/0 backdrop-blur-xs isolate shadow-lg ring-1 ring-black/5">
+								<p className="text-lg sm:text-2xl col-span-4">
+									Aprenda, passo a passo, a criar <span className="font-semibold underline">personagens marcantes e nada genéricos.</span>
+								</p>
 
-							<div className="col-span-3 col-start-6 flex flex-col justify-between gap-y-3">
-								<CardHeader className="flex flex-col items-center w-full xs:gap-y-4 px-0">
-									<p className="text-6xl leading-none font-bold flex">
-										<span className="text-3xl self-end">R$</span> 120 <span className="text-3xl self-start">,00</span>
-									</p>
-								</CardHeader>
+								<div className="col-span-3 col-start-6 flex flex-col justify-between gap-y-3">
+									<CardHeader className="flex flex-col items-center w-full xs:gap-y-4 px-0">
+										<p className="text-6xl leading-none font-bold flex">
+											<span className="text-3xl self-end">R$</span> 120 <span className="text-3xl self-start">,00</span>
+										</p>
+									</CardHeader>
 
-								<CardAction className="w-full">
-									<Button className="w-full bg-[#6A3E91] hover:bg-[#6A3E91]/80 text-white hover:text-neutral-100 hover:cursor-pointer h-11" asChild>
-										<a href={LINK_HOTMART}>Quero acesso Vitalício</a>
-									</Button>
-								</CardAction>
-							</div>
-						</Card>
+									<CardAction className="w-full">
+										<Button className="w-full bg-[#6A3E91] hover:bg-[#6A3E91]/80 text-white hover:text-neutral-100 hover:cursor-pointer h-11" asChild>
+											<a href={LINK_HOTMART}>Quero acesso Vitalício</a>
+										</Button>
+									</CardAction>
+								</div>
+							</Card>
 						</div>
 					</section>
 
@@ -120,12 +120,9 @@ const HomePage = () => {
 						<Image src="/backgrounds/bg-image.png" alt="" className="absolute -z-30 inset-x-0 bottom-0 w-full" width={800} height={800} />
 						{/* <Image src={"/backgrounds/advantages.png"} alt="" className="w-full absolute -z-10 my-auto" width={1200} height={600} /> */}
 
-						<div className="flex flex-col gap-6 md:grid grid-cols-6 lg:gap-10 mx-4 md:mx-0">
+						<div className="flex flex-col gap-6 md:grid grid-cols-6 lg:gap-10 mx-4 md:mx-0 md:px-4">
 							{advantagesCardsArray.map((card) => (
-								<Card
-									key={card.src}
-									className="col-span-2 md:nth-4:translate-x-1/2 md:nth-5:translate-x-1/2 bg-purple-400/0 backdrop-blur-xs isolate shadow-lg"
-								>
+								<Card key={card.src} className="col-span-2 md:nth-4:translate-x-1/2 md:nth-5:translate-x-1/2 bg-white">
 									<CardHeader className="gap-3">
 										<div className="w-fit flex items-center justify-center bg-[#6A3E91] rounded-full p-4 mx-auto">
 											<Image
