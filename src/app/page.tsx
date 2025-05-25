@@ -94,8 +94,8 @@ const HomePage = () => {
 						</div>
 					</section>
 
-					<section id="o-que-voce-vai-aprender" className="relative flex items-center">
-						<Image src="/backgrounds/bg-image.svg" alt="" className="absolute -z-30 inset-x-0 bottom-0 w-full max-h-[994px]" width={800} height={800} />
+					<section id="o-que-voce-vai-aprender" className="flex items-center">
+						{/* <Image src="/backgrounds/bg-image.svg" alt="" className="absolute -z-30 inset-x-0 bottom-0 w-full max-h-[994px]" width={800} height={800} /> */}
 						{/* <Image src={"/backgrounds/advantages.png"} alt="" className="w-full absolute -z-10 my-auto" width={1200} height={600} /> */}
 
 						<div className="flex flex-col gap-6 md:grid grid-cols-6 lg:gap-10 mx-4 md:mx-0 md:px-4 2xl:px-12">
@@ -130,14 +130,14 @@ const HomePage = () => {
 						<VideoSection />
 					</section>
 
-					<section id="quem-somos" className="space-y-4 md:space-y-8 relative">
-						<Image
+					<section id="quem-somos" className="space-y-4 md:space-y-8">
+						{/* <Image
 							src="/backgrounds/bg-image.svg"
 							alt=""
 							className="absolute -z-30 rotate-180 inset-x-0 top-0 w-full translate-y-1/8 max-h-[904px]"
 							width={800}
 							height={800}
-						/>
+						/> */}
 
 						<h2 className="text-center text-[#8938C1] fonte-semibold text-2xl xs:text-3xl md:text-5xl font-semibold uppercase">Conheça os seus instrutores:</h2>
 
