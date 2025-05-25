@@ -17,7 +17,7 @@ const unbounded = Unbounded({
 })
 
 export const metadata: Metadata = {
-	title: "Do zero ao primeiro personagem",
+	title: "Do Zero Ao Primeiro Personagem",
 	description: "Aprenda, passo a passo, a criar personagens marcantes e nada genéricos."
 }
 
