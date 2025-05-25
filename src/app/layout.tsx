@@ -26,7 +26,7 @@ const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
 		<html lang="pt-BR">
 			<body className={`${unbounded.className} ${inter.variable} antialiased`}>
 				<Header />
-				<main className="">{children}</main>
+				<main className="container mx-auto">{children}</main>
 				<Footer />
 			</body>
 		</html>

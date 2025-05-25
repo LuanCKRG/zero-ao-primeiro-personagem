@@ -56,13 +56,13 @@ const authorsCardsArray = [
 const HomePage = () => {
 	return (
 		<>
-			<div className="w-full relative overflow-hidden ">
+			<div className="relative overflow-hidden px-2 md:px-8 lg:px-16">
 				<div className="fixed left-0 -top-40 size-full -z-20 overflow-hidden">
 					<Vortex backgroundColor="transparent" className="flex size-full" rangeY={300} baseRadius={2} particleCount={50} rangeSpeed={1.5} baseHue={200} />
 				</div>
 
-				<div className="w-full space-y-8 xl:space-y-20">
-					<section id="curso" className="container mx-auto flex flex-col items-center px-6 lg:px-4">
+				<div className="space-y-8 xl:space-y-20">
+					<section id="curso" className="flex flex-col items-center">
 						<div className="max-w-[705px] flex flex-col items-center">
 							<Image className="w-full" alt="" src="/hero-image.jpeg" width={800} height={400} />
 
@@ -71,7 +71,7 @@ const HomePage = () => {
 							</p>
 						</div>
 
-						<div>
+						<div className="px-6 2xl:px-12">
 							<Card className="flex flex-col lg:grid grid-cols-8 lg:justify-between p-4 lg:p-8 w-full gap-x-10 bg-[#6A3E91] text-white backdrop-blur-xs isolate shadow-lg ring-1 ring-black/5">
 								<p className="text-lg sm:text-2xl col-span-4">
 									Aprenda, passo a passo, a criar <span className="font-semibold underline">personagens marcantes e nada genéricos.</span>
@@ -95,10 +95,10 @@ const HomePage = () => {
 					</section>
 
 					<section id="o-que-voce-vai-aprender" className="relative flex items-center">
-						<Image src="/backgrounds/bg-image.png" alt="" className="absolute -z-30 inset-x-0 bottom-0 w-full max-h-[994px]" width={800} height={800} />
+						<Image src="/backgrounds/bg-image.svg" alt="" className="absolute -z-30 inset-x-0 bottom-0 w-full max-h-[994px]" width={800} height={800} />
 						{/* <Image src={"/backgrounds/advantages.png"} alt="" className="w-full absolute -z-10 my-auto" width={1200} height={600} /> */}
 
-						<div className="container mx-auto px-2 md:px-8 lg:px-16 flex flex-col gap-6 md:grid grid-cols-6 lg:gap-10">
+						<div className="flex flex-col gap-6 md:grid grid-cols-6 lg:gap-10 mx-4 md:mx-0 md:px-4 2xl:px-12">
 							{advantagesCardsArray.map((card) => (
 								<Card key={card.src} className="col-span-2 md:nth-4:translate-x-1/2 md:nth-5:translate-x-1/2 bg-white">
 									<CardHeader className="gap-3">
@@ -123,15 +123,16 @@ const HomePage = () => {
 						</div>
 					</section>
 
-					<section id="trailer" className="container mx-auto px-2 md:px-8 lg:px-16">
-						<div className="flex items-center justify-center p-4 sm:p-8 lg:p-20 rounded-lg bg-purple-400/5 backdrop-blur-xs isolate shadow-lg shadow-purple-500">
-							<VideoSection />
-						</div>
+					<section
+						id="trailer"
+						className="flex items-center justify-center p-4 sm:p-8 lg:p-20 rounded-lg bg-purple-400/5 backdrop-blur-xs isolate shadow-lg shadow-purple-500"
+					>
+						<VideoSection />
 					</section>
 
 					<section id="quem-somos" className="space-y-4 md:space-y-8 relative">
 						<Image
-							src="/backgrounds/bg-image.png"
+							src="/backgrounds/bg-image.svg"
 							alt=""
 							className="absolute -z-30 rotate-180 inset-x-0 top-0 w-full translate-y-1/8 max-h-[904px]"
 							width={800}
@@ -140,14 +141,14 @@ const HomePage = () => {
 
 						<h2 className="text-center text-[#8938C1] fonte-semibold text-2xl xs:text-3xl md:text-5xl font-semibold uppercase">Conheça os seus instrutores:</h2>
 
-						<ul className="px-2 md:px-8 lg:px-16 flex flex-col md:flex-row justify-center items-center gap-6">
+						<ul className="flex flex-col md:flex-row justify-center items-center gap-6">
 							{authorsCardsArray.map((card) => (
 								<AuthorCard key={card.title} {...card} />
 							))}
 						</ul>
 					</section>
 
-					<section className="container mx-auto px-2 md:px-8 lg:px-16 space-y-8 lg:mt-46">
+					<section className="space-y-8 lg:mt-46">
 						<h2 className="text-2xl md:text-5xl text-center text-[#8938C1] font-semibold uppercase">Cronograma</h2>
 						<CourseModulesSection />
 						{/* <ul className="flex flex-col md:grid grid-cols-6 gap-x-10 gap-6 py-3">
@@ -174,7 +175,7 @@ const HomePage = () => {
 						</ul> */}
 					</section>
 
-					<section className="conatiner mx-auto px-6 md:px-0">
+					<section className="px-6 md:px-0">
 						<Card className="flex flex-col lg:grid grid-cols-8 lg:justify-between p-4 lg:p-8 w-full gap-x-10 bg-purple-400/0 backdrop-blur-xs isolate shadow-lg ring-1 ring-black/5">
 							<p className="text-lg sm:text-2xl col-span-4 text-center lg:text-start text-[#6A3E91] uppercase font-bold">
 								Do zero ao primeiro <br className="hidden lg:block" /> personagem
