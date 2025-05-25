@@ -72,7 +72,7 @@ const HomePage = () => {
 						</div>
 
 						<div className="px-6 lg:px-4">
-							<Card className="flex flex-col lg:grid grid-cols-8 lg:justify-between p-4 lg:p-8 w-full gap-x-10 bg-purple-400/0 backdrop-blur-xs isolate shadow-lg ring-1 ring-black/5">
+							<Card className="flex flex-col lg:grid grid-cols-8 lg:justify-between p-4 lg:p-8 w-full gap-x-10 bg-[#6A3E91] text-white backdrop-blur-xs isolate shadow-lg ring-1 ring-black/5">
 								<p className="text-lg sm:text-2xl col-span-4">
 									Aprenda, passo a passo, a criar <span className="font-semibold underline">personagens marcantes e nada genéricos.</span>
 								</p>
@@ -85,7 +85,7 @@ const HomePage = () => {
 									</CardHeader>
 
 									<CardAction className="w-full">
-										<Button className="w-full bg-[#6A3E91] hover:bg-[#6A3E91]/80 text-white hover:text-neutral-100 hover:cursor-pointer h-11" asChild>
+										<Button className="w-full text-[#6A3E91] bg-white transition-color duration-300 hover:bg-neutral-200 hover:cursor-pointer h-11" asChild>
 											<a href={LINK_HOTMART}>Quero acesso Vitalício</a>
 										</Button>
 									</CardAction>
