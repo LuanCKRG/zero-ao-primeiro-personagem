@@ -95,7 +95,7 @@ const HomePage = () => {
 					</section>
 
 					<section id="o-que-voce-vai-aprender" className="relative flex items-center">
-						<Image src="/backgrounds/bg-image.png" alt="" className="absolute -z-30 inset-x-0 bottom-0 w-full" width={800} height={800} />
+						<Image src="/backgrounds/bg-image.svg" alt="" className="absolute -z-30 inset-x-0 bottom-0 w-full" width={800} height={800} />
 						{/* <Image src={"/backgrounds/advantages.png"} alt="" className="w-full absolute -z-10 my-auto" width={1200} height={600} /> */}
 
 						<div className="flex flex-col gap-6 md:grid grid-cols-6 lg:gap-10 mx-4 md:mx-0 md:px-4">
