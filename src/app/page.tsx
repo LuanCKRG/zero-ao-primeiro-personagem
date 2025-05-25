@@ -116,7 +116,7 @@ const HomePage = () => {
 									</CardHeader>
 
 									<CardContent className="md:max-lg:px-2">
-										<p className="text-sm text-muted-foreground">{card.text}</p>
+										<p className="text-sm">{card.text}</p>
 									</CardContent>
 								</Card>
 							))}
