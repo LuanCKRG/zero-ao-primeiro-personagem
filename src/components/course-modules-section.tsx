@@ -20,16 +20,15 @@ const courseModulesCardsArray = [
 	{
 		id: 4,
 		title: "Character design para animação (Model Sheet)",
-		steps: [
-			"O que um personagem precisa para funcionar na animação + turnaround",
-			"O que faz um bom personagem para Games ?  Felipe Anselmé (Mad Boogie Creations)",
-			"Personagens para o mercado de games NA PRÁTICA com Felipe Anselmé (Mad Boogie Creations)"
-		]
+		steps: []
 	},
 	{
 		id: 5,
 		title: "Personagem para Games",
-		steps: ["Como pensar personagens para o mercado de games com Filpe Anslemé (Mad Boogie Creations)"]
+		steps: [
+			"O que faz um bom personagem para Games ? Felipe Anselmé (Mad Boogie Creations)",
+			"Personagens para o mercado de games NA PRÁTICA com Felipe Anselmé"
+		]
 	},
 	{ id: 6, title: "Vamos Produzir", steps: ["Mão na massa: vamos criar personagens"] },
 	{ id: 7, title: "Redes Sociais para Artistas", steps: ["Como postar, viralizar e vender", "Qual a melhor rede social para você ?"] }
