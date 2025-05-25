@@ -148,7 +148,7 @@ const HomePage = () => {
 						</ul>
 					</section>
 
-					<section className="space-y-8 lg:mt-46">
+					<section className="space-y-8">
 						<h2 className="text-2xl md:text-5xl text-center text-[#8938C1] font-semibold uppercase">Cronograma</h2>
 						<CourseModulesSection />
 						{/* <ul className="flex flex-col md:grid grid-cols-6 gap-x-10 gap-6 py-3">
