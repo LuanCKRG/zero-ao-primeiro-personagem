@@ -100,7 +100,7 @@ const HomePage = () => {
 
 						<div className="flex flex-col gap-6 md:grid grid-cols-6 lg:gap-10 mx-4 md:mx-0 md:px-4 2xl:px-12">
 							{advantagesCardsArray.map((card) => (
-								<Card key={card.src} className="col-span-2 md:nth-4:translate-x-1/2 md:nth-5:translate-x-1/2 bg-white">
+								<Card key={card.src} className="col-span-2 md:nth-4:translate-x-1/2 md:nth-5:translate-x-1/2 bg-white shadow-[#8938C1] shadow-lg">
 									<CardHeader className="gap-3">
 										<div className="w-fit flex items-center justify-center bg-[#6A3E91] rounded-full p-4 mx-auto">
 											<Image
