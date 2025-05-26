@@ -17,8 +17,9 @@ const unbounded = Unbounded({
 })
 
 export const metadata: Metadata = {
-	title: "Do Zero Ao Primeiro Personagem",
-	description: "Aprenda, passo a passo, a criar personagens marcantes e nada genéricos."
+	title: "Curso de Desenho de Personagens com Gustavo Almeida e Filipe Emerson.",
+	description:
+		"Aprenda a criar personagens marcantes com técnicas profissionais, fundamentos sólidos e ferramentas além do Photoshop. Domine o planejamento, acelere seu processo criativo e eleve seu portfólio. +10 horas de conteúdo com acesso vitalício!"
 }
 
 const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
